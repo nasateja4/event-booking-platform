@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function SignInPage() {
     const [isLoading, setIsLoading] = useState(false);
+    console.log("Signin page loaded"); // Debug log
 
     const handleGoogleSignIn = async () => {
         setIsLoading(true);

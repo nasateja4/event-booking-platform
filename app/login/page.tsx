@@ -8,6 +8,7 @@ function LoginContent() {
     const searchParams = useSearchParams();
     const callbackUrl = searchParams.get("callbackUrl") || "/";
     const [loading, setLoading] = useState(false);
+    console.log("Login page loaded"); // Debug log
 
     const handleGoogleSignIn = async () => {
         setLoading(true);
