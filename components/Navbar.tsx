@@ -19,8 +19,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${scrolled
-                    ? "bg-white/80 backdrop-blur-xl border-slate-200/50 shadow-sm py-3"
-                    : "bg-transparent border-transparent py-5"
+                ? "bg-white/80 backdrop-blur-xl border-slate-200/50 shadow-sm py-3"
+                : "bg-transparent border-transparent py-5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -81,7 +81,7 @@ export default function Navbar() {
                     ) : (
                         <div className="flex items-center gap-2">
                             <Link
-                                href="/api/auth/signin"
+                                href="/auth/signin"
                                 className={`hidden md:block px-5 py-2.5 rounded-full font-bold text-sm transition-all ${scrolled ? "text-slate-600 hover:bg-slate-100" : "text-slate-700 hover:bg-white/50"}`}
                             >
                                 Partner Login
