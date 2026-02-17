@@ -31,7 +31,7 @@ export default function HeroSection() {
     const hasImages = heroData.images && heroData.images.length > 0;
 
     return (
-        <section className="relative overflow-hidden py-32 min-h-[90vh] flex items-center justify-center">
+        <section className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center justify-center">
             {/* Dynamic Background */}
             {hasImages ? (
                 <>
@@ -63,7 +63,7 @@ export default function HeroSection() {
                 <div className="inline-block bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest ring-4 ring-indigo-50 mb-8 backdrop-blur-sm bg-opacity-80">
                     ✨ Premium Event Booking Platform
                 </div>
-                <h1 className="text-6xl md:text-8xl font-black tracking-tight text-slate-900 leading-tight mb-8 drop-shadow-sm">
+                <h1 className="text-4xl md:text-8xl font-black tracking-tight text-slate-900 leading-tight mb-8 drop-shadow-sm">
                     {hasImages ? (
                         <span className="text-white drop-shadow-lg">{heroData.title}</span>
                     ) : (
@@ -78,20 +78,20 @@ export default function HeroSection() {
                 </h1>
 
                 {hasImages ? (
-                    <p className="text-2xl text-white/90 font-medium mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+                    <p className="text-lg md:text-2xl text-white/90 font-medium mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
                         {heroData.subtitle}
                     </p>
                 ) : (
-                    <p className="text-2xl text-slate-600 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-2xl text-slate-600 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
                         From intimate proposals to grand celebrations, we make every moment magical with our premium venues and personalized packages
                     </p>
                 )}
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a href="#venues" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-6 rounded-[2rem] font-black text-lg uppercase tracking-wider shadow-2xl shadow-indigo-300/50 hover:scale-105 hover:shadow-indigo-400/50 transition-all">
+                    <a href="#venues" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 md:px-12 md:py-6 rounded-[2rem] font-black text-base md:text-lg uppercase tracking-wider shadow-2xl shadow-indigo-300/50 hover:scale-105 hover:shadow-indigo-400/50 transition-all">
                         Explore Venues 🎯
                     </a>
-                    <Link href="/login" className={`px-12 py-6 rounded-[2rem] font-black text-lg uppercase tracking-wider shadow-xl border-4 transition-all hover:scale-105 ${hasImages ? "bg-white/20 backdrop-blur-md text-white border-white/30 hover:bg-white/30" : "bg-white text-slate-900 border-slate-100 hover:border-indigo-200"}`}>
+                    <Link href="/login" className={`px-8 py-4 md:px-12 md:py-6 rounded-[2rem] font-black text-base md:text-lg uppercase tracking-wider shadow-xl border-4 transition-all hover:scale-105 ${hasImages ? "bg-white/20 backdrop-blur-md text-white border-white/30 hover:bg-white/30" : "bg-white text-slate-900 border-slate-100 hover:border-indigo-200"}`}>
                         Start Planning ✨
                     </Link>
                 </div>
@@ -103,9 +103,9 @@ export default function HeroSection() {
                         { emoji: "⭐", number: "4.9/5", label: "Client Rating" },
                         { emoji: "🏆", number: "100%", label: "Satisfaction" },
                     ].map((stat, idx) => (
-                        <div key={idx} className={`rounded-[2rem] p-8 shadow-xl border transition-all hover:-translate-y-2 ${hasImages ? "bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20" : "bg-white border-slate-100 hover:shadow-2xl"}`}>
-                            <span className="text-5xl mb-4 block">{stat.emoji}</span>
-                            <div className={`text-4xl font-black mb-2 ${hasImages ? "text-white" : "text-slate-900"}`}>{stat.number}</div>
+                        <div key={idx} className={`rounded-[2rem] p-6 md:p-8 shadow-xl border transition-all hover:-translate-y-2 ${hasImages ? "bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20" : "bg-white border-slate-100 hover:shadow-2xl"}`}>
+                            <span className="text-4xl md:text-5xl mb-4 block">{stat.emoji}</span>
+                            <div className={`text-3xl md:text-4xl font-black mb-2 ${hasImages ? "text-white" : "text-slate-900"}`}>{stat.number}</div>
                             <div className={`text-sm font-bold uppercase tracking-widest ${hasImages ? "text-white/70" : "text-slate-500"}`}>{stat.label}</div>
                         </div>
                     ))}
